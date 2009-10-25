@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{helvet}
+\usepackage{pst-pdf}
+\usepackage{pstricks}
+\usepackage{pst-text}
+\definecolor{luablue}{rgb}{0.02,0.04,0.48}
+\begin{document}
+
+\psset{unit=3}
+\begin{pspicture}(-1.75,-1.75)(1.75,1.75)
+\pscircle*[linecolor=luablue]{1}
+\pscircle*[linecolor=white](0.4,0.4){0.3}
+\psarc[linecolor=black!50,linestyle=dashed,
+  dash=4mm 1mm,linewidth=3pt](0,0){1.4}{195}{45}
+\pscircle*[linecolor=luablue](1,1){0.3}
+\rput(0,-0.3){\psscalebox{7}{\color{white}\textsf{Lua}}}
+\pstextpath{\psarcn[linestyle=none](0,0){1.4}{190}{45}}
+    {\huge\bfseries\sffamily\color{black!50}the programming language}
+\end{pspicture}
+\end{document}
